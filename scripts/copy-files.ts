@@ -1,14 +1,20 @@
-import { copyFileSync } from 'fs'
-import { resolve } from 'path'
-import { fileURLToPath } from 'url'
+import { copyFileSync, readdirSync, statSync } from 'node:fs'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-// relative to scripts directory
-const destinations = [
-  ['../LICENSE', '../packages/test/LICENSE'],
-  ['../README.md', '../packages/test/README.md'],
-]
+const _dirname = typeof __dirname !== 'undefined'
+  ? __dirname
+  : dirname(fileURLToPath(import.meta.url))
 
-const _filename = fileURLToPath(import.meta.url)
-destinations.forEach(([src, dest]) => {
-  copyFileSync(resolve(_filename, '..', src), resolve(_filename, '..', dest))
+const directories = readdirSync(resolve(_dirname, '../templates')).filter((file) => {
+  return statSync(resolve(_dirname, '../templates', file)).isDirectory()
+})
+
+directories.forEach((v) => {
+  const needCopyFiles = [
+    ['LICENSE', `templates/${v}/LICENSE`],
+    ['.eslintrc', `templates/${v}/.eslintrc`],
+  ]
+  for (const [source, file] of needCopyFiles)
+    copyFileSync(resolve(_dirname, '..', source), resolve(_dirname, '..', file))
 })

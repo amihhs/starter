@@ -1,16 +1,35 @@
-# monorepo template
+# quickly start template
 
+## vite-vue3-ts
 
-- typescript
-- eslint
-- [bumpp](https://github.com/antfu/bumpp)
+## vite-react-ts
 
-Automate your release process with a single command.
- More to see [bumpp](https://github.com/antfu/bumpp) and [version-bump-prompt](https://github.com/JS-DevTools/version-bump-prompt)
+## vite-svelte-ts
 
-- esno
-- husky
-- lint-staged
-- commitlint
-- unbuild
-- vitest
+## webpack-vue3-ts
+
+## webpack-react-ts
+
+## astro
+
+## qwik
+
+## nextjs
+
+## nuxt-vite-ts
+
+## nuxt-webpack-ts
+
+## uniapp
+
+## taro-vue3-ts
+
+## taro-react-ts
+
+## react-native
+
+## flutter
+
+## electron
+
+## tauri
