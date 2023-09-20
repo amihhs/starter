@@ -5,5 +5,22 @@
     "source.fixAll.eslint": true
   },
   "editor.formatOnSave": false,
-  "cSpell.words": []
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml"
+  ],
+  "cSpell.words": [],
+  "search.useIgnoreFiles": true,
+  "search.exclude": {
+    "**/node_modules": false,
+    "**/node_modulesss": true
+  }
 }

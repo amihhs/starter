@@ -2,6 +2,12 @@
 
 ## vite-vue3-ts
 
+- router
+- pinia
+- pwa
+- i18n
+- unocss
+
 ## vite-react-ts
 
 ## vite-svelte-ts
